@@ -1,0 +1,12 @@
+.list {
+  border: 3px solid white;
+  border-radius: 10px;
+
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}

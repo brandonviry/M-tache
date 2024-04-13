@@ -1,0 +1,20 @@
+:root {
+  --color1: #bfbfbf;
+  --color2: #595857;
+  --color3: #f2f2f2;
+  --color4: #262626;
+  --color5: #0d0d0d;
+}
+
+body {
+  background-color: var(--color4);
+  color: var(--color3);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+}
