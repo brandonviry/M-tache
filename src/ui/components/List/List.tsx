@@ -1,6 +1,6 @@
 import Button from "../Button/Button";
 import "./List.css";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 const List = ({
   children,
   f1,
@@ -13,8 +13,8 @@ const List = ({
   id: string;
 }) => {
   const [editor, setEditor] = useState(false);
-  const [value, setValue] = useState(children);
-  const xhange = (e: Event) => {
+  const [value, setValue] = useState(children as string);
+  const xhange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setValue(e.target.value);
   };
   return (
@@ -35,11 +35,10 @@ const List = ({
       ) : (
         <textarea
           style={{ width: "100%" }}
-          type="text"
           value={value}
           onBlur={() => {
             setEditor(false);
-            f2(id, value);
+            f2(parseInt(id), value);
           }}
           onChange={xhange}
         />
